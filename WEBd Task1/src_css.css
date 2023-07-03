@@ -1,0 +1,187 @@
+/* CSS Reset  */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+/* CSS Variables */
+:root{
+    --navbar--height:25px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+}
+
+/* Logo & Image  */
+#icon{
+    margin: 5px 10px;
+}
+#icon img{
+    height: 80px;
+    margin: 4px 20px;
+}
+
+/* List styling */
+#navbar ul li {
+    padding-left: 20px;
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li  a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 17px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.9;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+
+/* Middle Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url(https://cbsnews1.cbsistatic.com/hub/i/2015/07/01/0b059f60-344d-4ada-baae-e683aff3650a/istock000044051102large.jpg) no-repeat center center/cover;
+    height: 500px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.9;
+}
+
+/* Utility Classes */
+#home h1{
+    font-size: 2rem;
+    color: rgb(218, 211, 211);
+}
+#home h2{
+    color: rgb(218, 211, 211);
+}
+.btn{
+    background-color: rgb(217, 180, 180);
+    border-radius: 10px;
+    width: 90px;
+    padding: 7px;
+}
+
+/* Our services  */
+#our{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+.container{
+    margin-top: 20px;
+    display: flex;
+}
+.box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 22px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    width: 300px;
+}
+.box img{
+    height: 160px;
+   margin: auto;
+   display: block;
+}
+
+/* Contacts  */
+#contact{
+    position: relative;
+    margin-top:20px;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(https://www.immigration.ca/wp-content/uploads/2020/04/contact_us_279387361-scaled.jpeg) no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px ;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}

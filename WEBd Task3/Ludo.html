@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ludo Game</title>
+    <style>
+        .tokens{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            position: absolute;
+        }
+        #ludo_board{
+            background: url("Board2.png") ;
+            background-size: contain;
+            position: fixed;
+            left: 671px;
+            height: 600px;
+            width: 600px;
+        }
+        #die{
+            background: url("dice_rotating.gif");     
+            background-size: contain;
+            position: absolute;
+            height: 140px;
+            width: 150px;
+        }
+        #instruction{
+            position: fixed;
+            padding-left:10px;
+            padding-right:10px;
+        }
+    </style>
+    <script src="Game.js"></script>
+</head>
+<body>
+    <div style="width: 1000px;">
+    <div id="ludo_board"></div>
+
+    <div id="die" onclick="generate_number()" style="left: 205px;top:180px;"></div>
+    <!-- <div id="die" style="background-image: url(Dice_rotating.gif); padding-top:100px; left:500px;background-size:contain; width:150px;height:150px; "></div> -->
+
+    <!-- Red Tokens  -->
+    <div class="tokens" id="RED1" onclick="Move('RED',1)" style="background-color: rgba(172, 17, 17, 0.808); top: 47px; left: 702px;"></div>
+    <div class="tokens" id="RED2" onclick="Move('RED',2)" style="background-color: rgba(172, 17, 17, 0.808); top: 46px; left: 857px;"></div>
+    <div class="tokens" id="RED3" onclick="Move('RED',3)" style="background-color: rgba(172, 17, 17, 0.808); top: 205px; left: 703px;"></div>
+    <div class="tokens" id="RED4" onclick="Move('RED',4)" style="background-color: rgba(172, 17, 17, 0.808); top: 205px; left: 857px;"></div>
+
+    <!-- Yellow Tokens -->
+    <div class="tokens" id="YELLOW1" onclick="Move('YELLOW',1)" style="background-color: rgba(171, 174, 1, 0.808); top: 387px; left: 1056px;"></div>
+    <div class="tokens" id="YELLOW2" onclick="Move('YELLOW',2)" style="background-color: rgba(171, 174, 1, 0.808); top: 385px; left: 1211px;"></div>
+    <div class="tokens" id="YELLOW3" onclick="Move('YELLOW',3)" style="background-color: rgba(171, 174, 1, 0.808); top: 544px; left: 1056px;"></div>
+    <div class="tokens" id="YELLOW4" onclick="Move('YELLOW',4)" style="background-color: rgba(171, 174, 1, 0.808); top: 545px; left: 1210px;"></div>
+    
+    <!-- Blue Tokens -->
+    <div class="tokens" id="BLUE1" onclick="Move('BLUE',1)" style="background-color: rgba(57, 0, 155, 0.808); top: 45px; left: 1058px;"></div>
+    <div class="tokens" id="BLUE2" onclick="Move('BLUE',2)" style="background-color: rgba(57, 0, 155, 0.808); top: 45px; left: 1210px;"></div>
+    <div class="tokens" id="BLUE3" onclick="Move('BLUE',3)" style="background-color: rgba(57, 0, 155, 0.808); top: 205px; left: 1058px;"></div>
+    <div class="tokens" id="BLUE4" onclick="Move('BLUE',4)" style="background-color: rgba(57, 0, 155, 0.808); top: 205px; left: 1210px;"></div>
+    
+    <!-- Green Tokens -->
+    <div class="tokens" id="GREEN1" onclick="Move('GREEN',1)" style="background-color: rgba(17, 147, 0, 0.808); top: 401px; left: 703px;"></div>
+    <div class="tokens" id="GREEN2" onclick="Move('GREEN',2)" style="background-color: rgba(17, 147, 0, 0.808); top: 401px; left: 863px;"></div>
+    <div class="tokens" id="GREEN3" onclick="Move('GREEN',3)" style="background-color: rgba(17, 147, 0, 0.808); top: 545px; left: 702px;"></div>
+    <div class="tokens" id="GREEN4" onclick="Move('GREEN',4)" style="background-color: rgba(17, 147, 0, 0.808); top: 545px; left: 863px;"></div>
+    
+    <h3 id="instruction" style="left:170px;top:130px;">Click on the dice to play</h3>
+    <h4 id="player_num" style="left: 100px; position:absolute;top:350px;">Player : 1</h4>
+    <h3 id="curr_player" style="color:red;left: 180px; position:absolute;top:350px"> RED</h3>
+    <h4 id='turn' style="left: 220px; float:down;position:absolute;top: 350px;">'s turn</h4>
+    <p id="txt" style="left: 250px; position:absolute;top: 400px;"></p>
+    </div>
+</body>
+</html>
+
