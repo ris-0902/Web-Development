@@ -1,5 +1,5 @@
 # Web-Development
-3 Different Projects on Web Development, Created these during my internship under InternPe
+3 Different Projects on Web Development
 
 1st Task - A responsive online website for a restaurant built from scratch using HTML, CSS
 
